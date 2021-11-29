@@ -1,12 +1,39 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Form } from 'react-bootstrap';
 import Header from '../../Shared/Header/Header';
 import './Home.css';
 import shawon from '../../images/shawon-ahmmed.jpeg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import camtech from '../../images/camtech.jpg';
+import gogo from '../../images/gogotravels.jpg';
+import heartcare from '../../images/heartcare.jpg';
+import academy from '../../images/amaderacademy.jpg';
+import SingleProject from './SingleProject/SingleProject';
+import emailjs from 'emailjs-com';
+import Button from '@restart/ui/esm/Button';
 
 const Home = () => {
+    const projects = [
+        { name: "Camtech", link: "https://camtech-9c4a8.web.app/", image: `${camtech}`, id: 1 },
+        { name: "GOGO Travels", link: "https://gogo-travel-41711.web.app/", image: `${gogo}`, id: 2 },
+        { name: "Heart Care", link: "https://heart-care-87e5c.web.app/", image: `${heartcare}`, id: 3 },
+        { name: "Amader Academy", link: "https://amader-academy.netlify.app/", image: `${academy}`, id: 4 }
+    ]
+
+    //send email
+    const sendEmail = e => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_4geluyd', 'template_5az2bgo', e.target, 'user_l0boe73dQyv5QM4AN67Tl')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        e.target.reset()
+    }
+
     return (
         <div style={{ background: 'var(--darkPrimary)' }}>
             <section className="home-banner">
@@ -38,6 +65,59 @@ const Home = () => {
                                 <span className="first anim_translate" style={{ position: 'absolute' }}></span>
                                 <span className="second anim_left2" style={{ position: 'absolute' }}></span>
                                 <span className="third anim_right2" style={{ position: 'absolute' }}></span>
+                            </div>
+                        </div>
+                    </div>
+                </Container>
+            </section>
+            <section className="portfolio">
+                <Container>
+                    <h1 className="section-heading text-white mb-5">My Projects</h1>
+                    <div className="my-project-container">
+                        {
+                            projects.map(project => <SingleProject
+                                key={project.id}
+                                project={project}
+                            ></SingleProject>)
+                        }
+                    </div>
+                </Container>
+            </section>
+            <section id="contact">
+                <Container>
+                <h1 className="section-heading text-white mb-5">Contact Me</h1>
+                    <div className="d-grid contact-container">
+                        <div className="form-container">
+                            <form onSubmit={sendEmail}>
+                                <Form.Group className="mb-3" controlId="formBasicEmail">
+                                    <Form.Control type="text" placeholder="Your Name" name="from_name" />
+                                </Form.Group>
+                                <Form.Group className="mb-3" controlId="formBasicPassword">
+                                    <Form.Control type="email" placeholder="Your Email" name="email" />
+                                </Form.Group>
+                                <Form.Group>
+                                    <Form.Control
+                                        as="textarea"
+                                        placeholder="Your Message"
+                                        style={{ height: '100px' }}
+                                        name="message"
+                                    />
+                                </Form.Group>
+
+                                <Button className="btn secondary-btn mt-3" type="submit">
+                                    Submit
+                                </Button>
+                            </form>
+                        </div>
+                        <div className="contact-info">
+                            <h3 className="text-white">Address</h3>
+                            <address className="text-white">Satkhira, Khulna, Banglafesh</address>
+                            <h3 className="text-white">Cnntact Info</h3>
+                            <div>
+                                <p className="text-white">
+                                    Phone: +88 01890551410<br/>
+                                    Email: shawonahmmed19@gmail.com
+                                </p>
                             </div>
                         </div>
                     </div>

@@ -73,6 +73,12 @@
     border-radius: 50%;
 }
 
+.my-project-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+}
+
 .anim_left2 {
     animation: animLeft2 5s linear 0s infinite alternate;
 }
@@ -83,6 +89,25 @@
 
 .anim_translate{
     animation: animTranslate 5s linear 0s infinite alternate;
+}
+
+.portfolio{
+    padding: 80px 0px;
+}
+
+#contact{
+    background-color: var(--darkSecondary);
+    padding: 80px 0px;
+}
+
+.contact-container{
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+}
+
+.form-container, .contact-info{
+    padding: 50px;
+    background-color: #22355f;
 }
 
 /* animations */

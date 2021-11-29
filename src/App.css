@@ -48,3 +48,83 @@ h1, h2, h3, h4, h5, h6 {
 .brand-btn:hover{
   transform: scale(1.1);
 }
+
+.primary-btn{
+  background-color: var(--darkSecondary);
+  color: #fff;
+  font-size: 16px;
+  border-radius: 0!important;
+}
+
+.primary-btn:hover{
+  color: #fff;
+}
+
+.secondary-btn{
+  background-color: var(--brandColor);
+  color: #fff;
+  font-size: 16px;
+  border-radius: 0!important;
+}
+
+.secondary-btn:hover{
+  color: #fff;
+}
+
+.section-heading{
+  font-size: 42px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* media query */
+@media only screen and (max-width: 576px) {
+  p, a {
+    font-size: 16px!important;
+  }
+  .header-container{
+    flex-direction: column!important;
+  }
+  .menu{
+    width: 100%!important;
+  }
+  .download-resume{
+    width: 100%!important;
+    text-align: start!important;
+  }
+  .navigation-link a{
+    font-size: 14px!important;
+  }
+  .navigation-link{
+    padding-right: 10px!important;
+  }
+  .link-icon svg{
+    font-size: 14px;
+  }
+  .download-resume-btn{
+    margin-top: 20px;
+  }
+  .my-image img{
+    display: none!important;
+  }
+  .info-texts p{
+    font-size: 25px!important;
+  }
+  .info-texts{
+    width: 100%!important;
+  }
+  .social-links .social-item a{
+    font-size: 30px!important;
+  }
+  .my-project-container{
+    grid-template-columns: 1fr!important;
+    grid-row-gap: 20px!important;
+  }
+  .contact-container{
+    grid-template-columns: 1fr!important;
+    grid-row-gap: 20px;
+  }
+  .image-contents span {
+    display: none!important;
+  }
+}

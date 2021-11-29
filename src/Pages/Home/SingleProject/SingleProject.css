@@ -1,0 +1,11 @@
+.single-project-container{
+    position: relative;
+}
+.project-detail{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 20px 20px;
+    background-color: #8b8c9186;
+}
+

@@ -1,0 +1,35 @@
+.navigation-menu{
+    z-index: 100;
+    top: 40%;
+    left: 0;
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-icon svg{
+    font-size: 22px;
+    color: #fff;
+}
+
+.navigation-link{
+    margin: 0;
+    padding: 10px;
+    padding-right: 35px;
+    display: inline;
+    width: auto;
+    cursor: pointer;
+}
+
+.navigation-link a{
+    text-decoration: none;
+    color: #fff;
+    margin-left: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.navigation-link a:hover{
+    color:var(--brandColor)
+}
