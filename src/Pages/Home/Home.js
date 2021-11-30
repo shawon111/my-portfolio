@@ -12,15 +12,10 @@ import academy from '../../images/amaderacademy.jpg';
 import SingleProject from './SingleProject/SingleProject';
 import emailjs from 'emailjs-com';
 import Button from '@restart/ui/esm/Button';
+import useProjects from '../../hooks/useProjects';
 
 const Home = () => {
-    const projects = [
-        { name: "Camtech", link: "https://camtech-9c4a8.web.app/", image: `${camtech}`, id: 1 },
-        { name: "GOGO Travels", link: "https://gogo-travel-41711.web.app/", image: `${gogo}`, id: 2 },
-        { name: "Heart Care", link: "https://heart-care-87e5c.web.app/", image: `${heartcare}`, id: 3 },
-        { name: "Amader Academy", link: "https://amader-academy.netlify.app/", image: `${academy}`, id: 4 }
-    ]
-
+    const [projects] = useProjects();
     //send email
     const sendEmail = e => {
         e.preventDefault();
@@ -75,7 +70,7 @@ const Home = () => {
                     <h1 className="section-heading text-white mb-5">My Projects</h1>
                     <div className="my-project-container">
                         {
-                            projects.map(project => <SingleProject
+                            projects?.map(project => <SingleProject
                                 key={project.id}
                                 project={project}
                             ></SingleProject>)
