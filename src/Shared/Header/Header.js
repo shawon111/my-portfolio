@@ -3,7 +3,7 @@ import Navigation from '../Navigation/Navigation';
 
 const Header = () => {
     return (
-        <header style={{marginBottom: '40px'}}>
+        <header style={{marginBottom: '40px', backgroundColor:'var(--darkSecondary)'}}>
                 <div className="header-container d-flex align-items-center">
                     <div className="menu w-50"><Navigation></Navigation></div>
                     <div className="download-resume w-50 text-end">

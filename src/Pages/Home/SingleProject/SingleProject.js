@@ -4,7 +4,7 @@ import './SingleProject.css';
 
 const SingleProject = ({project}) => {
     const {image, link, name, id} = project;
-    const url = `projects/${id}`;
+    const url = `/${id}`;
     return (
         <div>
             <div className="single-project">

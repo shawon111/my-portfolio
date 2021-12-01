@@ -11,7 +11,7 @@ const Navigation = () => {
             <nav>
                 <ul>
                     <li className="navigation-link"><span className="link-icon"><FontAwesomeIcon icon={faHome} /></span><Link to="/">Home</Link></li>
-                    <li className="navigation-link"><span className="link-icon"><FontAwesomeIcon icon={faAddressCard} /></span><Link to="/about">About Me</Link></li>
+                    <li className="navigation-link"><span className="link-icon"><FontAwesomeIcon icon={faAddressCard} /></span><a href="#about">About Me</a></li>
                     <li className="navigation-link"><span className="link-icon"><FontAwesomeIcon icon={faBriefcase} /></span><Link to="/projects">Projects</Link></li>
                 </ul>
             </nav>

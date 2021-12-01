@@ -109,7 +109,14 @@
     padding: 50px;
     background-color: #22355f;
 }
-
+.about-me-texts{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+}
+.about-me-texts p {
+    font-size: 20px;
+}
 /* animations */
 @keyframes animTranslate {
     0% {

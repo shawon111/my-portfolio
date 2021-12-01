@@ -16,6 +16,7 @@ import useProjects from '../../hooks/useProjects';
 
 const Home = () => {
     const [projects] = useProjects();
+    console.log(projects)
     //send email
     const sendEmail = e => {
         e.preventDefault();
@@ -75,6 +76,17 @@ const Home = () => {
                                 project={project}
                             ></SingleProject>)
                         }
+                    </div>
+                </Container>
+            </section>
+            <section style={{backgroundColor: 'var(--brandColor)'}} id="about" className="p-5">
+                <Container>
+                    <h2 className="section-heading text-white">About Me</h2>
+                    <div className="about-me-texts mt-3 p-5">
+                        <p className="text-white">
+                        Hard-working web front-end developer with a flair for creating elegant solutions in the least amount of time. Developed an ecommerce webapp, travel agency website, learning management website, and many more websites. Passionate about software architecture and cloud computing. Regular attendee of web developer meetups and hackathons.
+                        </p>
+                        <p className="text-white">I'm Passionate about learning new technologies. I want to keep myself updated with the latest web development technology. As for web development technologies, I am skilled in HTML, CSS, JavaScript, React JS, Firebase, Git, Express JS, MongoDB and some other technologies.</p>
                     </div>
                 </Container>
             </section>
