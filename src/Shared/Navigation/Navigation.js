@@ -10,9 +10,10 @@ const Navigation = () => {
         <div className="navigation-menu">
             <nav>
                 <ul>
-                    <li className="navigation-link"><span className="link-icon"><FontAwesomeIcon icon={faHome} /></span><Link to="/">Home</Link></li>
-                    <li className="navigation-link"><span className="link-icon"><FontAwesomeIcon icon={faAddressCard} /></span><a href="#about">About Me</a></li>
-                    <li className="navigation-link"><span className="link-icon"><FontAwesomeIcon icon={faBriefcase} /></span><Link to="/projects">Projects</Link></li>
+                    <li className="navigation-link"><Link to="/">Home</Link></li>
+                    <li className="navigation-link"><a href="#about">About Me</a></li>
+                    <li className="navigation-link"><Link to="/projects">Projects</Link></li>
+                    <li className="navigation-link"><Link to="/blogs">Blogs</Link></li>
                 </ul>
             </nav>
         </div>

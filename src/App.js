@@ -6,6 +6,7 @@ import Projects from './Pages/Projects/Projects';
 import About from './Pages/About/About';
 import PageNotFound from './Pages/PageNotFound/PageNotFound';
 import Project from './Pages/Project/Project';
+import Blogs from './Pages/Blogs/Blogs';
 
 function App() {
   return (
@@ -18,11 +19,14 @@ function App() {
           <Route exact path="/projects">
             <Projects></Projects>
           </Route>
-          <Route exact path="/:Id">
-            <Project></Project>
-          </Route>
           <Route exact path="/about">
             <About></About>
+          </Route>
+          <Route exact path="/blogs">
+            <Blogs></Blogs>
+          </Route>
+          <Route exact path="/:Id">
+            <Project></Project>
           </Route>
           <Route path="*">
             <PageNotFound></PageNotFound>
